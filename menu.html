@@ -29,51 +29,79 @@
       <a href="#!" class="brand-logo left">Logo</a>
 
       <ul class="right">
-        <li><a href="sass.html"><i class="material-icons">shopping_cart</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">perm_identity</i></a></li>
+        <li><a href="cart.html"><i class="material-icons">shopping_cart</i></a></li>
+        <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
       </ul>
     </div>
   </nav>
 
+  
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Add to Cart</h4>
+      Quantity:
+       <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li id="num" class="active"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+
+    <script>
+    	function add() {
+    		$('#num').html($('#num').html().parseInt()+1);
+    	}
+    </script>
+  </ul>
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!"  onClick="$('#modal1').closeModal();return false;"  class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+
    <ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header default-primary-color">Appetizers</div>
+      <div class="collapsible-header default-primary-color" style="background-image: url('img/potato-wedge.png'); background-size: 100%; color: black; font-size: 20px; text-shadow: 5px 5px 5px black;">Starters</div>
       <div class="collapsible-body">
       	
-      	  <ul class="collapsible" data-collapsible="accordion">
-		    <li>
-		      <div class="collapsible-header">Mushroom Soup</div>
-		      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header">Mozza</div>
-		      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header">Main Course</div>
-		      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header">Desserts</div>
-		      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-		    </li>
-		  </ul>
+      	 <div class="row">
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <div style="background-image:url(img/potato-wedge.png);height:100px; background-size: cover;"></div>
+              <span class="card-title">Card Titldfas;dkfjadfkjad;fklje</span>
+            </div>
+            <div class="card-content">
+              <p style="padding:0px;">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+             <a class="waves-effect waves-light btn modal-trigger" onClick="$('#modal1').openModal();return false;" href="#modal1">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       </div>
     </li>
     <li>
-      <div class="collapsible-header default-primary-color">Entree</div>
+      <div class="collapsible-header default-primary-color" style="background-image: url('img/raviolli-lasagna.png'); background-size: 100% background-size: 100%; color: black; font-size: 20px; text-shadow: 5px 5px 5px black;">Entree</div>
       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
     </li>
     <li>
-      <div class="collapsible-header default-primary-color">Main Course</div>
+      <div class="collapsible-header default-primary-color" style="background-image: url('img/creamy-buffalo-wings.png'); background-size: 100% background-size: 100%; color: black; font-size: 20px; text-shadow: 5px 5px 5px black;">Main Course</div>
       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
     </li>
     <li>
-      <div class="collapsible-header default-primary-color">Desserts</div>
+      <div class="collapsible-header default-primary-color" style="background-image: url('img/ultimate-chocolate-cake.png'); background-size: 100% background-size: 100%; color: black; font-size: 20px; text-shadow: 5px 5px 5px black;">Desserts</div>
       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
     </li>
   </ul>
+
+
 
     </body>
   </html>
