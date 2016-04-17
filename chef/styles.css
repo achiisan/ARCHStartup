@@ -186,3 +186,25 @@ html, body {
 .delayable{
 	background-color: #7CB342;
 }
+
+.circle strong {
+    position: relative;
+    top: -70px;
+    left: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.circle strong i {
+    font-style: normal;
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
+.circle span {
+    display: block;
+    color: #aaa;
+    margin-top: 12px;
+}
