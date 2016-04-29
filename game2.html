@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+</head>
+<body onload="updateTimeDisplay(180)">
+    
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo left"><img src="SERAS_logo2.png" style="height: 60px;"/></a>
+        <ul id="nav-mobile" class="right">
+        <li style="margin:20px;">Order ID: 995231047</li>
+        <li>|</li>
+        <li><a href="shopping-cart.html"><i class="material-icons">shopping_cart</i></a></li>
+        <li style="margin-right:10px">Time left: <span id="time">---</span></li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="col s12">
+      
+
+      <div class="gameplayer" data-sub="cdn" data-width="100%" data-height="100%" height="100%" data-gid="576742227280293053"></div>
+<script>
+(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'http://cdn.gameplayer.io/api/js/publisher.js'; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'gameplayer-publisher'));
+ </script>
+    </div>
+
+
+<!--
+<script>
+d = new Date();
+document.getElementById("hour").innerHTML = d.getHours();
+document.getElementById("minute").innerHTML = d.getMinutes();
+</script>-->
+<script>
+var displayArea = document.getElementById("time");
+
+// conver number num to string, pad 0 in front to make it 2 digits
+function format(num) {
+    var numStr = num.toString();
+    if (numStr.length === 1) {
+        return "0" + numStr;
+    } else {
+        return numStr;
+    }
+}
+
+function updateTimeDisplay(dd) {
+    var mm, ss;
+    setInterval(function(){
+        mm = Math.floor(dd/60);
+        ss = dd%60;
+        displayArea.textContent = format(mm) + ":" + format(ss);
+        dd--;
+    }, 1000);
+}
+</script>
+</body>
+</html>
